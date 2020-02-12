@@ -1,0 +1,76 @@
+#import "./fragments/basicComment.graphql"
+#import "./fragments/basicCollection.graphql"
+#import "./fragments/basicResource.graphql"
+#import "./fragments/basicCommunity.graphql"
+#import "./fragments/basicUser.graphql"
+#import "../HOC/modules/ActivityPreview/getActivityPreview.graphql"
+query getUser(
+    $limitComm: Int,
+    $endComm: String,
+    $limitColl: Int,
+    $endColl: String,
+    $limitTimeline: Int,
+    $endTimeline: String
+) {
+    me {
+        user {
+            ...BasicUser
+            followedCommunities(limit: $limitComm, after: $endComm) {
+                pageInfo { startCursor endCursor }
+                edges {
+                    node {
+                        follow{
+                            id
+                            canonicalUrl
+                        }
+                        community {
+                            __typename
+                            ... on Community {
+                                ...BasicCommunity
+                            }
+                        }
+                    }
+                }
+            }
+            outbox(limit: $limitTimeline, after: $endTimeline) {
+                pageInfo { startCursor endCursor }
+                edges {
+                    node {
+                        ...ActivityPreviewData
+                        # id
+                        # canonicalUrl
+                        # verb
+                        # isLocal
+                        # isPublic
+                        # createdAt
+                        # user { ...BasicUser }
+                        # context {
+                        #     __typename
+                        #     ... on Resource   { ...BasicResource   }
+                        #     ... on Community  { ...BasicCommunity  }
+                        #     ... on Collection { ...BasicCollection }
+                        #     ... on Comment    { ...BasicCommentWithInReplyTo    }
+                        # }
+                    }
+                }
+            }
+            followedCollections(limit: $limitColl, after: $endColl) {
+                pageInfo { startCursor endCursor }
+                edges {
+                    node {
+                        follow {
+                            id
+                            canonicalUrl
+                        }
+                        collection {
+                            __typename
+                            ... on Collection {
+                                ...BasicCollection
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

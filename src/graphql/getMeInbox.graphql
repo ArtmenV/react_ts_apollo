@@ -1,0 +1,40 @@
+#import "./fragments/basicComment.graphql"
+#import "./fragments/basicCollection.graphql"
+#import "./fragments/basicResource.graphql"
+#import "./fragments/basicCommunity.graphql"
+#import "./fragments/basicUser.graphql"
+#import "../HOC/modules/ActivityPreview/getActivityPreview.graphql"
+
+query getMeInbox($limit: Int, $end: String) {
+    me {
+        user {
+            ...BasicUser
+            inbox(limit: $limit, after: $end) {
+                pageInfo {
+                    startCursor
+                    endCursor
+                }
+                edges {
+                    node {
+                    ...ActivityPreviewData
+                        # __typename
+                        # id
+                        # canonicalUrl
+                        # verb
+                        # isLocal
+                        # isPublic
+                        # createdAt
+                        # user { ...BasicUser }
+                        # context {
+                        #     __typename
+                        #     ... on Resource   { ...BasicResource   }
+                        #     ... on Community  { ...BasicCommunity  }
+                        #     ... on Collection { ...BasicCollection }
+                        #     ... on Comment    { ...BasicCommentWithInReplyTo    }
+                        # }
+                    }
+                }
+            }
+        }
+    }
+}

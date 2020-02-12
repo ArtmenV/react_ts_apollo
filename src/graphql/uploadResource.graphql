@@ -1,0 +1,11 @@
+mutation uploadResource($contextId: ID!,$upload: Upload!) {
+   uploadResource(contextId:$contextId, upload:$upload ){
+        id
+        metadata {
+            heightPx
+            widthPx
+        }
+        url 
+    }
+    
+}

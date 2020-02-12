@@ -1,0 +1,14 @@
+#import "./fragments/basicCollection.graphql"
+
+input CollectionInput {
+    name: String!
+    summary: String
+    preferredUsername: String!
+    icon: String
+}
+
+mutation createCollectionMutation($communityId: String!, $collection: CollectionInput!) {
+    createCollection(communityId: $communityId, collection: $collection) {
+        ...BasicCollection
+    }
+}

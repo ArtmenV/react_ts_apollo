@@ -1,0 +1,17 @@
+#import "./fragments/basicResource.graphql"
+
+
+input ResourceInput {
+    name: String!
+    summary: String
+    url: String!
+    icon: String
+    license: String
+}
+
+mutation createResourceMutation($collectionId: String!, $resource: ResourceInput!) {
+    createResource(collectionId: $collectionId, resource: $resource) {
+        ...BasicResource
+    }
+}
+

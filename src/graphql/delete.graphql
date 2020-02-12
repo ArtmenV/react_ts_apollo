@@ -1,0 +1,5 @@
+mutation deleteMutation($contextId: String!) {
+  delete(contextId: $contextId){
+    __typename
+  }
+}

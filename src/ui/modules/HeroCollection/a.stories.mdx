@@ -1,0 +1,16 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { PropsTable } from '@storybook/components';
+import {getHeroCollectionProps} from 'ui/mock/context'
+import { HeroCollection } from '.';
+
+<Meta title="Modules|HeroCollection" component={HeroCollection}/>
+
+# HeroCollection
+Let's define a story for the `Hero collection preview` module
+
+<Preview>
+  <Story name="Hero collection module">
+    <HeroCollection {...getHeroCollectionProps()}/>
+  </Story>
+</Preview>
+

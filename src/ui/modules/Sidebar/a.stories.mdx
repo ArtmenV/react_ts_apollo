@@ -1,0 +1,40 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { PropsTable } from '@storybook/components';
+import { Sidebar, Status } from '.';
+import { SearchBox } from "react-instantsearch-dom";
+
+export const SidebarProps= {
+status: Status.Loaded,
+communities: [
+ {
+   name: "Italian landscapes",
+   icon: "https://i.picsum.photos/id/237/200/300.jpg",
+   link: {
+     url: "/communities/1",
+     external: true
+   }
+ }
+],
+user: {
+  name: "Ivan",
+  icon: "https://i.picsum.photos/id/237/200/300.jpg",
+  
+},
+Search: () => (<img
+        src="https://via.placeholder.com/400x80.png?text=SearchBox"
+      />),
+logout: () => (console.log('logout'))
+}
+
+
+
+<Meta title="Modules|Sidebar" component={Sidebar}/>
+
+# Sidebar
+Let's define a story for the `Hero collection preview` module
+
+<Preview>
+  <Story name="Sidebar Module">
+    <Sidebar sidebar={SidebarProps} />
+  </Story>
+</Preview>

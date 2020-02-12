@@ -1,0 +1,35 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { PropsTable } from '@storybook/components';
+import { Collection } from '.';
+import {HeroCollection} from 'ui/modules/HeroCollection'
+import {getHeroCollectionProps, getResourcePreviewProps} from 'ui/mock/context'
+import {ActivityPreview} from 'ui/modules/ActivityPreview'
+import {activityPreviewProps} from 'ui/pages/community/a.stories.mdx'
+import {ResourcePreview} from 'ui/modules/ResourcePreview'
+
+<Meta title="Pages|Collection" component={Collection}/>
+
+
+# Collection
+Let's define a story for the `Collection` page
+
+<Preview>
+  <Story name="Collection page">
+    <Collection 
+      HeroCollectionBox={(<HeroCollection {...getHeroCollectionProps()} />)}
+      ActivityBoxes={[
+        (<ActivityPreview {...activityPreviewProps} key="1" />),
+        (<ActivityPreview {...activityPreviewProps} key="2" />),
+        (<ActivityPreview {...activityPreviewProps} key="3" />),
+      ]}
+      ResourceBoxes={[
+        (<ResourcePreview {...getResourcePreviewProps()} key="1"/>),
+        (<ResourcePreview {...getResourcePreviewProps()} key="2"/>),
+        (<ResourcePreview {...getResourcePreviewProps()} key="3"/>),
+      ]}
+      basePath="/"
+    />
+  </Story>
+</Preview>
+
+

@@ -1,0 +1,8 @@
+query getCommunityForEdit($communityId: String!) {
+    community(communityId: $communityId) {
+        id
+        name
+        summary
+        icon
+    }
+}

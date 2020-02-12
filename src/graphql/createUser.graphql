@@ -1,0 +1,30 @@
+input RegistrationInput {
+    email: String!
+    password: String!
+    preferredUsername: String!
+    name: String!
+    summary: String
+    wantsEmailDigest: Boolean!
+    wantsNotifications: Boolean!
+    location: String
+    website: String
+    icon: String
+    image: String
+}
+
+mutation createUserMutation($user: RegistrationInput!) {
+    createUser(user: $user) {
+        email
+        wantsEmailDigest
+        wantsNotifications
+        isConfirmed
+        user {
+            id
+            preferredUsername
+            name
+            summary # bio
+            location
+            website
+        }
+    }
+}

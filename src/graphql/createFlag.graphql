@@ -1,0 +1,5 @@
+mutation createFlagMutation($contextId: String!, $message: String!) {
+  createFlag(contextId: $contextId, message: $message){
+    context { __typename }
+  }
+}

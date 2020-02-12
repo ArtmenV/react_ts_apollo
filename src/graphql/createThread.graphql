@@ -1,0 +1,26 @@
+input CommentInput {
+    content: String!
+}
+
+mutation createThreadMutation($contextId: String!, $comment: CommentInput!) {
+    createThread(contextId: $contextId, comment: $comment) {
+        id
+        canonicalUrl
+        inReplyTo {
+            ...BasicCommentWithInReplyTo
+        }
+        content
+        isLocal
+        isPublic
+        isHidden
+        createdAt
+        updatedAt
+        creator {
+            name
+            icon
+        }
+        thread {
+            id
+        }
+    }
+}

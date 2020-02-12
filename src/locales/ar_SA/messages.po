@@ -1,0 +1,760 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-10-20 14:27+0300\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: ar_SA\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:105
+#: src/pages/discover/index.tsx:104
+#: src/pages/discover/index.tsx:127
+msgid "#assessment"
+msgstr ""
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:99
+#: src/pages/discover/index.tsx:98
+#: src/pages/discover/index.tsx:121
+msgid "#english"
+msgstr ""
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:93
+#: src/pages/discover/index.tsx:92
+#: src/pages/discover/index.tsx:115
+msgid "#pedagogy"
+msgstr ""
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:102
+#: src/pages/discover/index.tsx:101
+#: src/pages/discover/index.tsx:124
+msgid "#template"
+msgstr ""
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:96
+#: src/pages/discover/index.tsx:95
+#: src/pages/discover/index.tsx:118
+msgid "#transition"
+msgstr ""
+
+#: src/components/elements/CollectionModal/fetched.tsx:26
+#: src/components/elements/CollectionModal/index.tsx:19
+msgid "A name or title for the resource"
+msgstr "اسم أو عنوان للمورد"
+
+#: src/components/elements/CollectionModal/fetched.tsx:28
+msgid "Add"
+msgstr "أضافة"
+
+#: src/pages/collections.all/index.tsx:25
+#: src/pages/discover/index.tsx:80
+msgid "All collections"
+msgstr "جميع المجموعات"
+
+#: src/pages/communities.all/CommunitiesAll.tsx:27
+#: src/pages/discover/index.tsx:75
+msgid "All communities"
+msgstr "جميع المجتمعات"
+
+#: src/pages/settings/generalInfo.tsx:254
+msgid "Avatar"
+msgstr "صورة الملف الشخصي"
+
+#: src/pages/thread/header.tsx:51
+msgid "Back"
+msgstr "عودة"
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:119
+msgid "Behavioural science"
+msgstr "العلوم السلوكية"
+
+#: src/pages/login/Login.tsx:299
+msgid "Browse"
+msgstr ""
+
+#: src/pages/discover/index.tsx:70
+#: src/pages/home/index.tsx:61
+msgid "Browse Home instance"
+msgstr "استعرض الصفحة الرئيسية"
+
+#: src/pages/login/Login.tsx:290
+msgid "Browse this MoodleNet instance"
+msgstr ""
+
+#: src/components/elements/CollectionModal/fetched.tsx:107
+#: src/components/elements/CommunityModal/index.tsx:76
+#: src/components/elements/CreateCollectionModal/index.tsx:97
+#: src/components/elements/CreateCommunityModal/index.tsx:107
+#: src/components/elements/DropzoneModal/imageModal.tsx:85
+#: src/components/elements/EditCollectionModal/index.tsx:68
+#: src/components/elements/EditCommunityModal/index.tsx:72
+#: src/components/elements/EditResourceModal/index.tsx:82
+#: src/components/elements/FlagModal/index.tsx:101
+#: src/components/elements/FlagModal/index.tsx:119
+#: src/components/elements/SignupModal/index.tsx:168
+#: src/pages/collections.collection/collection.tsx:43
+#: src/ui/modules/CreateCollectionModal/index.tsx:76
+#: src/ui/modules/CreateCommunityModal/index.tsx:71
+#: src/ui/modules/EditCollectionModal/index.tsx:79
+#: src/ui/modules/EditCommunityModal/index.tsx:74
+#: src/ui/modules/EditResourceModal/index.tsx:74
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: src/components/elements/CommunityModal/index.tsx:21
+#: src/components/elements/CreateCollectionModal/index.tsx:18
+#: src/ui/modules/CreateCollectionModal/index.tsx:13
+msgid "Choose a name for the collection"
+msgstr "اختر اسم المجموعة"
+
+#: src/components/elements/CreateCommunityModal/index.tsx:20
+#: src/ui/modules/CreateCommunityModal/index.tsx:13
+#: src/ui/modules/EditCommunityModal/index.tsx:14
+#: src/ui/modules/EditResourceModal/index.tsx:12
+msgid "Choose a name for the community"
+msgstr "اختر اسم المجتمع"
+
+#: src/components/elements/SignupModal/index.tsx:47
+#: src/pages/Signup/index.tsx:49
+msgid "Choose your password"
+msgstr "أختر كلمة المرور الخاصة بك"
+
+#: src/components/elements/DropzoneModal/index.tsx:78
+msgid "Clear"
+msgstr ""
+
+#: src/sections/sidebar/dropdown.tsx:79
+msgid "Code of Conduct"
+msgstr "القواعد السلوكية"
+
+#: src/pages/communities.community/Community.tsx:44
+msgid "Collections"
+msgstr "المجموعات"
+
+#: src/components/elements/UsersModal/index.tsx:16
+msgid "Community Members"
+msgstr "أعضاء المجتمع"
+
+#: src/components/elements/SignupModal/index.tsx:155
+#: src/pages/Signup/index.tsx:283
+msgid "Confirm password"
+msgstr "تأكيد كلمة المرور"
+
+#: src/components/elements/SignupModal/index.tsx:48
+#: src/pages/Signup/index.tsx:50
+msgid "Confirm your password"
+msgstr "أكد كلمة المرور الخاصة بك"
+
+#: src/pages/login/Login.tsx:241
+msgid "Could not log in. Please check your credentials or use the link below to reset your password."
+msgstr "تعذر تسجيل الدخول. يرجى التحقق من بيانات الاعتماد الخاصة بك أو استخدام الرابط أدناه لإعادة تعيين كلمة المرور الخاصة بك."
+
+#: src/components/elements/CommunityModal/index.tsx:73
+#: src/components/elements/CreateCollectionModal/index.tsx:94
+#: src/components/elements/CreateCommunityModal/index.tsx:104
+#: src/ui/modules/CreateCollectionModal/index.tsx:73
+#: src/ui/modules/CreateCommunityModal/index.tsx:68
+#: src/ui/modules/EditCollectionModal/index.tsx:76
+#: src/ui/modules/EditCommunityModal/index.tsx:71
+#: src/ui/modules/EditResourceModal/index.tsx:71
+msgid "Create"
+msgstr "إنشاء"
+
+#: src/components/elements/SignupModal/index.tsx:90
+msgid "Create a new account"
+msgstr "إنشاء حساب جديد"
+
+#: src/components/elements/CommunityModal/index.tsx:37
+#: src/components/elements/CreateCollectionModal/index.tsx:53
+#: src/pages/communities.community/Community.tsx:63
+#: src/ui/modules/CreateCollectionModal/index.tsx:35
+msgid "Create a new collection"
+msgstr "إنشاء مجموعة جديدة"
+
+#: src/pages/communities.all/CommunitiesAll.tsx:37
+#: src/pages/communities.joined/index.tsx:22
+#: src/ui/modules/CreateCommunityModal/index.tsx:30
+msgid "Create a new community"
+msgstr "إنشاء مجتمع جديد"
+
+#: src/components/elements/CreateCommunityModal/index.tsx:62
+msgid "Create a new community!!"
+msgstr ""
+
+#: src/components/elements/Comment/Comment.tsx:45
+msgid "Deleted user"
+msgstr "مستخدم محذوف"
+
+#: src/components/elements/CollectionModal/fetched.tsx:83
+#: src/components/elements/CommunityModal/index.tsx:55
+#: src/components/elements/CreateCollectionModal/index.tsx:73
+#: src/components/elements/CreateCommunityModal/index.tsx:80
+#: src/components/elements/EditCollectionModal/index.tsx:43
+#: src/components/elements/EditCommunityModal/index.tsx:45
+#: src/components/elements/EditResourceModal/index.tsx:55
+#: src/pages/settings/generalInfo.tsx:239
+#: src/ui/modules/CreateCollectionModal/index.tsx:50
+#: src/ui/modules/CreateCommunityModal/index.tsx:45
+#: src/ui/modules/EditCollectionModal/index.tsx:53
+#: src/ui/modules/EditCommunityModal/index.tsx:48
+#: src/ui/modules/EditResourceModal/index.tsx:48
+msgid "Description"
+msgstr "الوصف"
+
+#: src/sections/sidebar/index.tsx:225
+#: src/sections/sidebar/sidebar_not_logged.tsx:156
+msgid "Discover"
+msgstr "اكتشف"
+
+#: src/components/elements/SignupModal/index.tsx:121
+#: src/pages/Signup/index.tsx:251
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#: src/components/elements/Resource/Resource.tsx:35
+msgid "Edit"
+msgstr "تعديل"
+
+#: src/components/elements/EditCollectionModal/index.tsx:25
+#: src/ui/modules/EditCollectionModal/index.tsx:38
+msgid "Edit the collection details"
+msgstr "تحرير تفاصيل المجموعة"
+
+#: src/components/elements/EditCommunityModal/index.tsx:25
+#: src/ui/modules/EditCommunityModal/index.tsx:33
+msgid "Edit the community details"
+msgstr "تحرير تفاصيل المجتمع"
+
+#: src/ui/modules/EditCollectionModal/index.tsx:14
+msgid "Edit the name of the collection"
+msgstr ""
+
+#: src/components/elements/EditResourceModal/index.tsx:24
+#: src/ui/modules/EditResourceModal/index.tsx:24
+msgid "Edit the resource details"
+msgstr "تحرير تفاصيل المورد"
+
+#: src/components/elements/SignupModal/index.tsx:111
+#: src/pages/Signup/index.tsx:241
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:122
+msgid "English"
+msgstr "اللغة الإنكليزية"
+
+#: src/ui/modules/EditCollectionModal/index.tsx:16
+msgid "Enter the URL of an icon to represent the collection"
+msgstr ""
+
+#: src/components/elements/CommunityModal/index.tsx:23
+#: src/components/elements/CreateCollectionModal/index.tsx:20
+#: src/components/elements/TalkModal/index.tsx:42
+#: src/ui/modules/CreateCollectionModal/index.tsx:15
+msgid "Enter the URL of an image to represent the collection"
+msgstr "أدخل مسار الصورة لتمثيل المجموعة"
+
+#: src/components/elements/CreateCommunityModal/index.tsx:22
+#: src/ui/modules/CreateCommunityModal/index.tsx:15
+#: src/ui/modules/EditCommunityModal/index.tsx:16
+msgid "Enter the URL of an image to represent the community"
+msgstr "أدخل مسار الصورة لتمثيل المجتمع"
+
+#: src/components/elements/CollectionModal/fetched.tsx:29
+#: src/components/elements/CollectionModal/index.tsx:22
+#: src/ui/modules/EditResourceModal/index.tsx:14
+msgid "Enter the URL of an image to represent the resource"
+msgstr "أدخل مسار الصورة لتمثيل المورد"
+
+#: src/components/elements/CollectionModal/fetched.tsx:25
+#: src/components/elements/CollectionModal/index.tsx:18
+msgid "Enter the URL of the resource"
+msgstr "أدخل مسار المورد"
+
+#: src/pages/login/LoginForm.tsx:62
+msgid "Enter your email"
+msgstr "أدخل بريدك الالكتروني"
+
+#: src/pages/login/LoginForm.tsx:69
+msgid "Enter your password"
+msgstr "أدخل كلمة المرور الخاصة بك"
+
+#: src/pages/collections.all/index.tsx:32
+#: src/pages/collections.followed/index.tsx:15
+#: src/pages/communities.community/CommunitiesCommunity.tsx:29
+msgid "Error loading collections"
+msgstr "خطأ في تحميل المجموعات"
+
+#: src/pages/communities.all/CommunitiesAll.tsx:33
+#: src/pages/communities.joined/index.tsx:16
+msgid "Error loading communities"
+msgstr "خطأ في تحميل المجتمعات"
+
+#: src/pages/home/index.tsx:45
+msgid "Error loading moodlenet timeline"
+msgstr "خطأ في تحميل الجدول الزمني لمودل نت"
+
+#: src/sections/sidebar/index.tsx:198
+msgid "Error loading the sidebar"
+msgstr ""
+
+#: src/pages/Profile/index.tsx:31
+#: src/pages/User/index.tsx:50
+msgid "Error loading user"
+msgstr "خطأ في تحميل المستخدم"
+
+#: src/components/featuredCollections/index.tsx:63
+msgid "Featured collections"
+msgstr "مجموعات مميزة"
+
+#: src/components/featuredCommunities/index.tsx:106
+msgid "Featured communities"
+msgstr "المجتمعات المميزة"
+
+#: src/sections/sidebar/dropdown.tsx:85
+msgid "Feedback & Suggestions"
+msgstr "التعليقات والاقتراحات"
+
+#: src/components/elements/CollectionModal/index.tsx:21
+msgid "Fetch the resource"
+msgstr "إحضار المورد"
+
+#: src/components/elements/FlagModal/index.tsx:33
+#: src/components/elements/FlagModal/index.tsx:89
+#: src/components/elements/MoreOptions/index.tsx:81
+msgid "Flag"
+msgstr ""
+
+#: src/components/elements/Collection/Join.tsx:84
+#: src/pages/User/index.tsx:114
+msgid "Follow"
+msgstr "تابع"
+
+#: src/pages/Profile/index.tsx:53
+#: src/pages/User/index.tsx:67
+msgid "Followed Collections"
+msgstr "المجموعات المتّبعة"
+
+#: src/pages/collections.all/collectionsFollowed.tsx:19
+msgid "Followed collections"
+msgstr "المجموعات المتّبعة"
+
+#: src/pages/settings/generalInfo.tsx:179
+#: src/pages/settings/sidebarSettings.tsx:93
+msgid "General Information"
+msgstr "معلومات عامة"
+
+#: src/pages/settings/generalInfo.tsx:269
+msgid "Header image"
+msgstr "صورة الخلفية"
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:116
+msgid "Humanities"
+msgstr "العلوم الإنسانية"
+
+#: src/ui/modules/EditCollectionModal/index.tsx:65
+msgid "Icon"
+msgstr ""
+
+#: src/components/elements/CollectionModal/fetched.tsx:94
+#: src/components/elements/CreateCommunityModal/index.tsx:94
+#: src/components/elements/EditCollectionModal/index.tsx:54
+#: src/components/elements/EditCommunityModal/index.tsx:58
+#: src/components/elements/EditResourceModal/index.tsx:68
+#: src/ui/modules/CreateCollectionModal/index.tsx:62
+#: src/ui/modules/CreateCommunityModal/index.tsx:57
+#: src/ui/modules/EditCommunityModal/index.tsx:60
+#: src/ui/modules/EditResourceModal/index.tsx:60
+msgid "Image"
+msgstr "صورة"
+
+#: src/pages/login/Login.tsx:316
+msgid "Instance description"
+msgstr ""
+
+#: src/pages/discover/index.tsx:49
+msgid "Instance timeline"
+msgstr "الجدول الزمني المجلي"
+
+#: src/pages/collections.collection/stateless.tsx:33
+msgid "Is it not possible to show the collection"
+msgstr ""
+
+#: src/pages/thread/stateless.tsx:24
+msgid "Is it not possible to show the thread"
+msgstr ""
+
+#: src/pages/communities.community/Join.tsx:76
+msgid "Join"
+msgstr "انضم"
+
+#: src/sections/sidebar/sidebar_not_logged.tsx:148
+msgid "Join MoodleNet"
+msgstr ""
+
+#: src/pages/collections.collection/collection.tsx:34
+msgid "Join the community"
+msgstr ""
+
+#: src/pages/Profile/index.tsx:58
+#: src/pages/User/index.tsx:72
+msgid "Joined Communities"
+msgstr "المجتمعات التي تم الانضمام اليها"
+
+#: src/pages/communities.all/communitiesJoined.tsx:21
+msgid "Joined communities"
+msgstr "المجتمعات التي تم الانضمام اليها"
+
+#: src/pages/communities.community/Join.tsx:46
+msgid "Leave"
+msgstr "إلغاء العضوية"
+
+#: src/components/elements/CollectionModal/fetched.tsx:60
+#: src/components/elements/EditResourceModal/index.tsx:30
+msgid "Link"
+msgstr "رابط"
+
+#: src/pages/Profile/index.tsx:104
+#: src/pages/User/index.tsx:119
+msgid "Links"
+msgstr "الروابط"
+
+#: src/components/elements/Loadmore/collections.tsx:29
+#: src/components/elements/Loadmore/community.tsx:31
+#: src/components/elements/Loadmore/followingCollections.tsx:45
+#: src/components/elements/Loadmore/joinedCommunities.tsx:46
+#: src/components/elements/Loadmore/localInstance.tsx:22
+#: src/components/elements/Loadmore/timeline.tsx:27
+#: src/components/elements/Loadmore/timelineoutbox.tsx:42
+#: src/components/elements/Loadmore/timelineUser.tsx:34
+msgid "Load more"
+msgstr "تحميل المزيد"
+
+#: src/pages/settings/generalInfo.tsx:225
+msgid "Location"
+msgstr "الموقع"
+
+#: src/sections/sidebar/index.tsx:233
+msgid "My MoodleNet"
+msgstr "موديل نت الشخصي"
+
+#: src/pages/home/index.tsx:39
+msgid "My MoodleNet timeline"
+msgstr "الجدول الزمني لمودل نت الشخصي"
+
+#: src/pages/home/index.tsx:71
+msgid "My collections"
+msgstr "مجموعاتي"
+
+#: src/pages/home/index.tsx:66
+msgid "My communities"
+msgstr "مجتماعاتي"
+
+#: src/components/elements/CollectionModal/fetched.tsx:70
+#: src/components/elements/CommunityModal/index.tsx:43
+#: src/components/elements/CreateCollectionModal/index.tsx:60
+#: src/components/elements/EditCollectionModal/index.tsx:31
+#: src/components/elements/EditCommunityModal/index.tsx:31
+#: src/components/elements/EditResourceModal/index.tsx:41
+#: src/pages/settings/generalInfo.tsx:187
+msgid "Name"
+msgstr "الاسم"
+
+#: src/components/elements/CollectionModal/fetched.tsx:30
+msgid "No files selected"
+msgstr ""
+
+#: src/components/elements/DropzoneModal/imageModal.tsx:78
+msgid "OK"
+msgstr ""
+
+#: src/pages/login/Login.tsx:286
+msgid "Or"
+msgstr "أو"
+
+#: src/pages/not-found/NotFound.tsx:17
+msgid "Page not found"
+msgstr "الصفحة غير موجودة"
+
+#: src/components/elements/SignupModal/index.tsx:145
+#: src/pages/Signup/index.tsx:273
+msgid "Password"
+msgstr "كلمه السر"
+
+#: src/pages/Signup/index.tsx:201
+msgid "Please confirm your email clicking on the link we sent you at"
+msgstr ""
+
+#: src/components/elements/FlagModal/index.tsx:34
+msgid "Please describe the reason for flagging the item"
+msgstr ""
+
+#: src/components/elements/CommunityModal/index.tsx:22
+#: src/components/elements/CreateCollectionModal/index.tsx:19
+#: src/components/elements/TalkModal/index.tsx:41
+#: src/ui/modules/CreateCollectionModal/index.tsx:14
+#: src/ui/modules/EditCollectionModal/index.tsx:15
+msgid "Please describe what the collection is for and what kind of resources it is likely to contain..."
+msgstr "يرجى وصف الغرض من المجموعة ونوع الموارد التي يحتمل أن تحتويها ..."
+
+#: src/components/elements/CreateCommunityModal/index.tsx:21
+#: src/ui/modules/CreateCommunityModal/index.tsx:14
+#: src/ui/modules/EditCommunityModal/index.tsx:15
+msgid "Please describe who might be interested in this community and what kind of collections it is likely to contain..."
+msgstr "يرجى وصف من قد يكون مهتمًا بهذا المجتمع ونوع المجموعات التي يحتمل أن تحتوي ..."
+
+#: src/ui/modules/EditResourceModal/index.tsx:13
+msgid "Please describe who might be interested in this resource..."
+msgstr ""
+
+#: src/components/elements/CollectionModal/fetched.tsx:27
+#: src/components/elements/CollectionModal/index.tsx:20
+msgid "Please type or copy/paste a summary about the resource..."
+msgstr "يرجى كتابة أو نسخ و لصق ملخص عن المورد ..."
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:112
+msgid "Popular categories"
+msgstr "الفئات الأكثر شعبية"
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:89
+msgid "Popular hashtags"
+msgstr "الهاشتاقات الأكثر شعبية"
+
+#: src/pages/discover/index.tsx:111
+msgid "Popular hashtags: local instance"
+msgstr "الهاشتاقات المحلية الأكثر شعبية"
+
+#: src/pages/discover/index.tsx:88
+msgid "Popular hashtags: network"
+msgstr "هاشتاقات مجتمعي الأكثر شعبية"
+
+#: src/components/elements/TalkModal/index.tsx:40
+msgid "Post a reply"
+msgstr "اكتب رد"
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:128
+msgid "Postgraduate"
+msgstr "الدراسات العليا"
+
+#: src/pages/settings/preferences.tsx:31
+#: src/pages/settings/sidebarSettings.tsx:101
+msgid "Preferences"
+msgstr "تفضيلات المستخدم"
+
+#: src/components/elements/SignupModal/index.tsx:131
+#: src/pages/settings/generalInfo.tsx:202
+#: src/pages/settings/generalInfo.tsx:210
+#: src/pages/Signup/index.tsx:261
+msgid "Preferred username"
+msgstr "اسم المستخدم المفضل"
+
+#: src/pages/login/Login.tsx:293
+msgid "Preview what people are sharing, curating, and discussing!"
+msgstr ""
+
+#: src/sections/sidebar/dropdown.tsx:67
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: src/components/elements/CollectionModal/fetched.tsx:104
+msgid "Publish"
+msgstr ""
+
+#: src/pages/communities.community/Community.tsx:39
+#: src/pages/User/index.tsx:62
+msgid "Recent activities"
+msgstr "احدث الأنشطة"
+
+#: src/pages/Reset/index.tsx:62
+msgid "Reset the password"
+msgstr "إعادة ضبط كلمة المرور"
+
+#: src/pages/collections.collection/collection.tsx:22
+msgid "Resources"
+msgstr "الموارد"
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:125
+msgid "Romana"
+msgstr "رومانا"
+
+#: src/components/elements/EditCollectionModal/index.tsx:65
+#: src/components/elements/EditCommunityModal/index.tsx:69
+#: src/components/elements/EditResourceModal/index.tsx:79
+#: src/pages/settings/generalInfo.tsx:286
+msgid "Save"
+msgstr "حفظ"
+
+#: src/pages/CreateNewPassword/index.tsx:67
+msgid "Save the new password"
+msgstr "احفظ كلمة المرور الجديدة"
+
+#: src/pages/search/Search.tsx:101
+msgid "Search filter"
+msgstr ""
+
+#: src/pages/search/Search.tsx:83
+msgid "Search result"
+msgstr ""
+
+#: src/components/elements/DropzoneModal/imageModal.tsx:59
+msgid "Select Image"
+msgstr ""
+
+#: src/pages/settings/preferences.tsx:37
+msgid "Select language"
+msgstr "اختر اللغة"
+
+#: src/components/elements/FlagModal/index.tsx:98
+msgid "Send"
+msgstr ""
+
+#: src/pages/Signup/index.tsx:298
+msgid "Sending request"
+msgstr ""
+
+#: src/pages/Profile/index.tsx:99
+#: src/pages/settings/sidebarSettings.tsx:84
+#: src/sections/sidebar/dropdown.tsx:73
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: src/pages/collections.collection/collection.tsx:47
+msgid "Share a link"
+msgstr "مشاركة الرابط"
+
+#: src/components/elements/SignupModal/index.tsx:165
+msgid "Sign Up"
+msgstr "انشاء حساب"
+
+#: src/components/elements/SignupModal/index.tsx:43
+#: src/pages/login/LoginForm.tsx:76
+#: src/pages/Signup/index.tsx:44
+msgid "Sign in"
+msgstr "تسجيل الدخول"
+
+#: src/sections/sidebar/dropdown.tsx:104
+msgid "Sign out"
+msgstr "تسجيل الخروج"
+
+#: src/pages/login/Login.tsx:307
+msgid "Sign up"
+msgstr ""
+
+#: src/pages/Signup/index.tsx:293
+msgid "Signup"
+msgstr ""
+
+#: src/pages/Signup/index.tsx:305
+msgid "Something went wrong with registration"
+msgstr ""
+
+#: src/containers/App/App copy.tsx:100
+msgid "Sorry, we encountered a problem loading the app in your language."
+msgstr "عذرًا ، واجهنا مشكلة أثناء تحميل التطبيق بلغتك."
+
+#: src/pages/login/Login.tsx:207
+msgid "The email field cannot be empty"
+msgstr "لا يمكن أن يكون حقل البريد الإلكتروني فارغًا"
+
+#: src/pages/login/Login.tsx:214
+msgid "The password field cannot be empty"
+msgstr "لا يمكن أن يكون حقل كلمة المرور فارغًا"
+
+#: src/ui/modules/EditResourceModal/index.tsx:11
+msgid "The url of the resource"
+msgstr ""
+
+#: src/pages/collections.collection/collection.tsx:54
+msgid "This collection is empty."
+msgstr ""
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:43
+msgid "This community has no collections."
+msgstr "هذا المجتمع لا يوجد لديه مجموعات."
+
+#: src/pages/Profile/index.tsx:48
+msgid "Timeline"
+msgstr "الجدول الزمني"
+
+#: src/components/elements/Resource/Resource.tsx:41
+#: src/pages/search/preview.tsx:44
+msgid "To Moodle!"
+msgstr "إلى مودل!"
+
+#: src/pages/login/Login.tsx:281
+msgid "Trouble logging in?"
+msgstr "مشكلة في تسجيل الدخول؟"
+
+#: src/components/elements/FlagModal/index.tsx:107
+#: src/components/elements/FlagModal/index.tsx:116
+#: src/components/elements/MoreOptions/index.tsx:81
+msgid "Unflag"
+msgstr ""
+
+#: src/components/elements/Collection/Join.tsx:51
+msgid "Unfollow"
+msgstr "الغاء المتابعة"
+
+#: src/pages/Signup/index.tsx:308
+msgid "Unknown error"
+msgstr ""
+
+#: src/pages/Signup/index.tsx:197
+msgid "Welcome"
+msgstr ""
+
+#: src/apollo/client.tsx:101
+msgid "You should log in for performing this operation!"
+msgstr ""
+
+#: src/components/elements/SignupModal/index.tsx:46
+#: src/pages/Signup/index.tsx:48
+msgid "eg. Moodler Mary"
+msgstr "على سبيل المثال. ماري مودل"
+
+#: src/components/elements/SignupModal/index.tsx:45
+#: src/pages/Signup/index.tsx:46
+msgid "eg. mary@moodlers.org"
+msgstr "على سبيل المثال. mary@moodlers.org"
+
+#: src/pages/Signup/index.tsx:47
+msgid "eg. moodlerMary"
+msgstr ""
+
+#: src/components/elements/TimelineItem/index2.tsx:64
+#: src/ui/modules/TimelineItem/index.tsx:58
+msgid "in"
+msgstr "في"
+
+#: src/pages/collections.collection/collection.tsx:38
+msgid "to add a resource"
+msgstr ""
+
+#: src/pages/communities.community/CommunitiesCommunity.tsx:60
+msgid "{0}"
+msgstr "{0}"
+
+#: src/components/elements/TimelineItem/index2.tsx:32
+#: src/ui/modules/TimelineItem/index.tsx:30
+msgid "{0} a collection in"
+msgstr ""
+
+#: src/components/elements/TimelineItem/index2.tsx:127
+#: src/ui/modules/TimelineItem/index.tsx:118
+msgid "{0} a community"
+msgstr ""
+
+#: src/components/elements/TimelineItem/index2.tsx:63
+#: src/ui/modules/TimelineItem/index.tsx:57
+msgid "{0} a resource"
+msgstr ""
+
+#: src/pages/login/Login.tsx:319
+msgid "{INSTANCE_DESCRIPTION}"
+msgstr ""

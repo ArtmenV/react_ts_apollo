@@ -1,0 +1,15 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { PropsTable } from '@storybook/components';
+import {getResourcePreviewProps} from 'ui/mock/context'
+import { ResourcePreview } from 'ui/modules/ResourcePreview';
+
+<Meta title="Modules|ResourcePreview" component={ResourcePreview}/>
+
+# ResourcePreview
+Let's define a story for the `Collection preview` module
+
+<Preview>
+  <Story name="Resource preview module">
+    <ResourcePreview {...getResourcePreviewProps()} />
+  </Story>
+</Preview>

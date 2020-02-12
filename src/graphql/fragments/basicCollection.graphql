@@ -1,0 +1,34 @@
+#import "./basicUser.graphql"
+#import "./basicResourcesEdges.graphql"
+
+fragment BasicCollection on Collection {
+    id
+    canonicalUrl
+    preferredUsername
+    name
+    summary
+    creator { ...BasicUser }
+    icon
+    isLocal
+    isPublic
+    createdAt
+    myLike { id }
+    myFollow { id }
+    myFlag { id }
+    community {
+        id
+        canonicalUrl
+        isLocal
+        isPublic
+        name
+        icon
+        myFollow { id }
+        myFlag { id }
+    }
+    resources { 
+        ...BasicResourcesEdges
+    }
+    followers { totalCount }
+    threads { totalCount }
+    outbox { totalCount }
+}

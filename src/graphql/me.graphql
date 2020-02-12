@@ -1,0 +1,23 @@
+query meQuery {
+    me {
+        email
+        user {
+            id
+            canonicalUrl
+            preferredUsername
+            name
+            location
+            icon
+            image
+            summary
+            location
+            website
+            isLocal
+            isPublic
+            isDisabled
+            createdAt
+            updatedAt
+            lastActivity
+        }
+    }
+}

@@ -1,0 +1,33 @@
+#import "./fragments/basicComment.graphql"
+#import "./fragments/basicCollection.graphql"
+#import "./fragments/basicResource.graphql"
+#import "./fragments/basicCommunity.graphql"
+#import "./fragments/basicUser.graphql"
+#import "../HOC/modules/ActivityPreview/getActivityPreview.graphql"
+query localActivities($limit: Int, $end: String) {
+    instance {
+        outbox(limit: $limit, after: $end) {
+            pageInfo { startCursor endCursor }
+            edges {
+                cursor
+                node {
+                    ...ActivityPreviewData
+                    # id
+                    # canonicalUrl
+                    # verb
+                    # isLocal
+                    # isPublic
+                    # createdAt
+                    # user { ...BasicUser }
+                    # context {
+                    #     __typename
+                    #     ... on Resource   { ...BasicResource   } 
+                    #     ... on Community  { ...BasicCommunity  }
+                    #     ... on Collection { ...BasicCollection }
+                    #     ... on Comment    { ...BasicCommentWithInReplyTo    }
+                    # }
+                }
+            }
+        }
+    }
+}

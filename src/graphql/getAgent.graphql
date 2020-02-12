@@ -1,0 +1,81 @@
+#import "./fragments/basicComment.graphql"
+#import "./fragments/basicCollection.graphql"
+#import "./fragments/basicCommunity.graphql"
+#import "./fragments/basicUser.graphql"
+#import "./fragments/basicResource.graphql"
+query getAgentQuery(
+  $userId: String!
+  $limitComm: Int
+  $endComm: String
+  $limitColl: Int
+  $endColl: String
+  $limitTimeline: Int 
+  $endTimeline: String
+) {
+  user(userId: $userId) {
+    ...BasicUser
+    outbox (limit: $limitTimeline, after:$endTimeline) {
+      pageInfo { startCursor endCursor }
+      edges {
+        node {
+          id
+          canonicalUrl
+          verb
+          isLocal
+          isPublic
+          createdAt
+          user {
+            ...BasicUser
+          }
+          context {
+            __typename
+            ... on Resource   { ...BasicResource   }
+            ... on Community  { ...BasicCommunity  }
+            ... on Collection { ...BasicCollection }
+            ... on Comment    { ...BasicCommentWithInReplyTo    }
+          }       
+        }
+      }
+    }
+    followedCommunities(limit: $limitComm, after:$endComm) {
+      pageInfo { startCursor endCursor }
+      edges {
+        node {
+          follow{
+            id
+            canonicalUrl
+            isLocal
+            isPublic
+            createdAt
+          }
+          community {
+            __typename
+            ... on Community {
+              ...BasicCommunity
+            }
+          }
+        }
+      }
+    }
+    followedCollections(limit: $limitColl, after:$endColl) {
+      pageInfo { startCursor endCursor }
+      edges {
+        node {
+          follow {
+            id
+            canonicalUrl
+            isLocal
+            isPublic
+            createdAt
+          }
+          collection {
+            __typename
+            ... on Collection {
+              ...BasicCollection
+            }
+          }
+        }
+      }
+    }
+  }
+}

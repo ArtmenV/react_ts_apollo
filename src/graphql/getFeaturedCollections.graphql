@@ -1,0 +1,28 @@
+#import "./fragments/basicCollection.graphql"
+
+query getFeaturedCollections {
+  instance {
+    featuredCollections {
+      pageInfo { startCursor endCursor }
+      totalCount
+      edges {
+        cursor
+        node {
+          id
+          canonicalUrl
+          isLocal
+          createdAt
+          creator {
+            ...BasicUser
+          }
+          context {
+            __typename
+            ... on Collection {
+              ...BasicCollection
+            }
+          }
+        }
+      }
+    }
+  }
+}

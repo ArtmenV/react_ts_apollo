@@ -1,0 +1,9 @@
+#import "./fragments/basicCommunity.graphql"
+query getCommunitiesQuery($limit: Int, $end: String) {
+    communities(limit: $limit, after:$end) {
+        pageInfo { startCursor endCursor }
+        nodes {
+            ...BasicCommunity
+        }
+    }
+}

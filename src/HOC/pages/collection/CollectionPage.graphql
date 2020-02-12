@@ -1,0 +1,52 @@
+#import "HOC/modules/HeroCollection/HeroCollection.graphql"
+#import "HOC/modules/ActivityPreview/getActivityPreview.graphql"
+
+query collectionPage($collectionId: String!) {
+  collection(collectionId:$collectionId){
+    ...HeroCollectionData
+    resourceCount
+    community{
+      id
+      myFollow{
+        id
+      }
+    }
+    resources{
+      edges{
+        node{
+          ...CollectionPageResource
+          createdAt
+        }
+      }
+    }
+    outbox{
+      edges{
+        node{
+          ...ActivityPreviewData
+        }
+      }
+    }
+  }
+}
+
+fragment CollectionPageResource on Resource {
+  ...ActivityPreviewResourceCtx
+  createdAt
+}
+mutation collectionPageResourceLike($contextId: String!) {
+    createLike(contextId: $contextId){
+        ...ActivityPreviewLikeCtx
+    }
+}
+
+mutation collectionPageResourceUnlike($contextId: String!) {
+    delete(contextId: $contextId){
+        __typename
+    }
+}
+
+mutation collectionPageResourceCreateThread($contextId: String!, $comment: CommentInput!) {
+    createThread(comment:$comment, contextId: $contextId){
+        ...ActivityPreviewCommentCtxBase
+    }
+}

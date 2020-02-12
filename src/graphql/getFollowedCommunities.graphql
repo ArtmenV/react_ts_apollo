@@ -1,0 +1,27 @@
+#import "./fragments/basicCommunity.graphql"
+
+
+query getFollowedCommunitiesQuery($limit: Int, $endComm: String) {
+    me {
+        user {
+            id
+            followedCommunities(limit: $limit, after:$endComm) {
+                pageInfo { startCursor endCursor }
+                edges {
+                    node {
+                        follow {
+                            id
+                            canonicalUrl
+                        }
+                        community {
+                            __typename
+                            ... on Community {
+                                ...BasicCommunity
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

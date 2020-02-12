@@ -1,0 +1,15 @@
+#import "./basicUser.graphql"
+
+fragment BasicAuthPayload on AuthPayload {
+    token
+    me {
+        email
+        isConfirmed
+        isInstanceAdmin
+        wantsEmailDigest
+        wantsNotifications 
+        user {
+            ...BasicUser
+        }
+    }
+}

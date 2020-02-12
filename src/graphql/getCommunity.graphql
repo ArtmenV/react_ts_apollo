@@ -1,0 +1,112 @@
+#import "./fragments/basicComment.graphql"
+#import "./fragments/basicCollection.graphql"
+#import "./fragments/basicResource.graphql"
+#import "./fragments/basicCommunity.graphql"
+#import "./fragments/basicUser.graphql"
+#import "../HOC/modules/ActivityPreview/getActivityPreview.graphql"
+
+query getCommunityQuery($communityId: String!, $limit: Int, $end: String) {
+    community(communityId: $communityId) {
+        id
+        canonicalUrl
+        preferredUsername
+        name
+        summary
+        icon
+        createdAt
+        creator { id }
+        updatedAt
+        lastActivity
+        isLocal
+        isPublic
+        isDisabled
+        myFollow { id }
+        outbox(limit: $limit, after: $end) {
+            pageInfo { startCursor endCursor }
+            edges {
+                node {
+                    ...ActivityPreviewData
+                    # id
+                    # canonicalUrl
+                    # verb
+                    # isLocal
+                    # isPublic
+                    # createdAt
+                    # user { ...BasicUser }
+                    # context {
+                    #     __typename
+                    #     ... on Resource   { ...BasicResource   }
+                    #     ... on Community  { ...BasicCommunity  }
+                    #     ... on Collection { ...BasicCollection }
+                    #     ... on Comment    { ...BasicCommentWithInReplyTo    }
+                    # }       
+                }
+            }
+        }
+        threads(limit: $limit, after: $end) {
+            pageInfo { startCursor endCursor }
+            edges {
+                node {
+                    id
+                    canonicalUrl
+                    isLocal
+                    isPublic
+                    isHidden
+                    createdAt
+                    updatedAt
+                    lastActivity
+                    context {
+                        __typename
+                        ... on Community { id icon name}
+                        ... on Collection { id icon name}
+                        ... on Resource { id icon name}
+                
+                    }
+                    myFollow { id }
+                    comments {
+                        totalCount
+                        edges {
+                            node { ...BasicCommentWithInReplyTo }
+                        }
+                    } 
+                }
+            }
+        }
+        followers {
+            pageInfo { startCursor endCursor }
+            totalCount
+            edges {
+                node {
+                    id
+                    canonicalUrl
+                    isLocal
+                    isPublic
+                    creator {
+                        id
+                        icon
+                    }
+                }
+            }
+        }
+        collections {
+            pageInfo { startCursor endCursor }
+            totalCount
+            edges {
+                node {
+                    id
+                    canonicalUrl
+                    preferredUsername
+                    name
+                    summary
+                    icon
+                    myFollow { id }
+		            likes     { totalCount}
+                    followers { totalCount }
+                    resources { totalCount }
+                    threads   { totalCount }
+                    # outbox    { totalCount }
+                }
+            }
+        }
+    }
+}

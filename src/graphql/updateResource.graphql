@@ -1,0 +1,24 @@
+input ResourceInput {
+    icon: String!
+    license: String
+    name: String!
+    summary: String
+    url: String}
+
+
+
+ mutation updateResourceMutation($resource: ResourceInput!,$resourceId: String!) {
+    updateResource(resource: $resource, resourceId: $resourceId) {
+        id
+        name
+        summary
+        url
+        license
+        icon
+        # isLocal
+        # isPublic
+        # isDisabled
+        createdAt
+        updatedAt
+    }
+}

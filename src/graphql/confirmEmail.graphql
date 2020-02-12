@@ -1,0 +1,6 @@
+#import "./fragments/basicAuthPayload.graphql"
+mutation confirmEmailMutation($token: String!) {
+    confirmEmail(token: $token) {
+        ... BasicAuthPayload
+    }
+}

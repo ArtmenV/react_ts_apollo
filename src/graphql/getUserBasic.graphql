@@ -1,0 +1,8 @@
+#import "./fragments/basicUser.graphql"
+
+query getUserBasic {
+    me {
+        email
+        user { ...BasicUser }
+    }
+}

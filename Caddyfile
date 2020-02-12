@@ -1,0 +1,29 @@
+:80, # for testing only - make sure to disable in prod
+:443
+{
+
+#   tls self_signed # for local testing - make sure to disable in prod
+
+		root /frontend
+
+  proxy /api backend:4000 {
+    websocket
+    transparent
+  }
+  
+  proxy /pub backend:4000 {
+    websocket
+    transparent
+  }
+
+  proxy /oauth backend:4000 {
+    transparent
+  }
+  
+  proxy /.well-known/webfinger backend:4000 {
+    transparent
+  }
+
+  gzip
+
+}

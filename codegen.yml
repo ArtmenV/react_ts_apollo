@@ -1,0 +1,37 @@
+schema: ${REACT_APP_GRAPHQL_ENDPOINT}
+documents: src/**/!(*.client).graphql
+overwrite: true
+watch: false
+hooks:
+  afterStart: 
+    - node codegencleanup
+  onWatchTriggered:
+    - node codegencleanup
+     
+generates:
+  src/graphql/schema.generated.json:
+    plugins:
+      - introspection
+  src/graphql/types.generated.ts:
+    plugins:
+      - typescript
+      - fragment-matcher
+      - typescript-resolvers
+  src/graphql/:
+    preset: near-operation-file
+    presetConfig:
+      extension: .generated.tsx
+      baseTypesPath: types.generated.ts
+      # folder: generated/
+    plugins:
+      - typescript-operations
+      - typescript-react-apollo
+      - ./src/util/apollo/operation/codegen-plugin.js
+    config:
+      exportFragmentSpreadSubTypes: true
+      preResolveTypes: false
+      avoidOptionals: false
+      reactApolloVersion: 3
+      withHooks: true
+      withHOC: true
+      nonOptionalTypename: true

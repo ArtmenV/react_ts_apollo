@@ -1,0 +1,28 @@
+#import "./fragments/basicCommunity.graphql"
+
+query getFeaturedCommunities {
+  instance {
+    featuredCommunities {
+      pageInfo { startCursor endCursor }
+      totalCount
+      edges {
+        cursor
+        node {
+          id
+          canonicalUrl
+          isLocal
+          createdAt
+          creator {
+            ...BasicUser
+          }
+          context {
+            __typename
+            ... on Community {
+              ...BasicCommunity
+            }
+          }
+        }
+      }
+    }
+  }
+}

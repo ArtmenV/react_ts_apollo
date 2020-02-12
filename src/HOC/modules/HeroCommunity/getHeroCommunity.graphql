@@ -1,0 +1,19 @@
+
+query getHeroCommunity($communityId: String!) {
+    community(communityId: $communityId) {
+        ...HeroCommunityData
+    }
+}
+
+fragment HeroCommunityData on Community  {
+    id
+    displayUsername
+    name
+    summary
+    icon
+    followers {
+        totalCount
+    }
+    myFollow { id }
+    creator { id }
+}

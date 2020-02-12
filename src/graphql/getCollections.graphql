@@ -1,0 +1,10 @@
+#import "./fragments/basicCollection.graphql"
+
+query getCollectionsQuery($limit: Int, $end: String) {
+    collections(limit: $limit, after:$end) {
+        pageInfo { startCursor endCursor }
+        nodes {
+            ...BasicCollection
+        }
+    }
+}

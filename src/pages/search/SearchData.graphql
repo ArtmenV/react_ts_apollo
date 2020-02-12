@@ -1,0 +1,70 @@
+query SearchHostIndexAndMyFollowings{
+  instance{
+    ...SearchInstance
+  }
+  me{
+    ...SearchMe
+  }
+}
+
+mutation searchFollowLocal($contextId:String!){
+  createFollow(contextId:$contextId){
+    id
+  }
+}
+mutation searchFollowRemote($url:String!){
+  followRemoteActor(url:$url){
+    id
+  }
+}
+
+mutation searchUnfollow($contextId:String!){
+  delete(contextId:$contextId){
+    __typename
+  }
+}
+
+fragment SearchInstance on Instance {
+    hostname
+}
+
+fragment SearchMe on Me {
+  user{
+    id
+    followedCollections{
+      edges{
+        node{
+          ...SearchFollowedCollection
+        }
+      }
+    }
+    followedCommunities{
+      edges{
+        node{
+          ...SearchFollowedCommunity
+        }
+      }
+    }
+  }
+}
+
+fragment SearchFollowedCommunity on FollowedCommunity {
+  follow{
+    id
+  }
+  community{
+    id
+    canonicalUrl
+  }
+}
+fragment SearchFollowedCollection on FollowedCollection {
+  follow{
+    id
+  }
+  collection{
+    id
+    canonicalUrl
+  }
+}
+
+

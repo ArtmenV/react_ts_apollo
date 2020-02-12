@@ -1,0 +1,6 @@
+mutation likeMutation($contextId: String!) {
+    createLike(contextId: $contextId){
+        id
+        context { __typename }
+    }
+}

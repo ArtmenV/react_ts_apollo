@@ -1,0 +1,7 @@
+#import "./fragments/basicCollection.graphql"
+
+query getCollection($id: String!) {
+  collection(collectionId: $id) {
+    ...BasicCollection
+  }
+}

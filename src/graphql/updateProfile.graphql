@@ -1,0 +1,26 @@
+input UpdateProfileInput {
+    name: String
+    summary: String
+    icon: String
+    image: String
+    location: String
+    website: String
+    wantsEmailDigest: Boolean
+    wantsNotifications: Boolean
+}
+
+mutation updateProfileMutation($profile: UpdateProfileInput!) {
+    updateProfile(profile: $profile) {
+        wantsEmailDigest
+        wantsNotifications
+        user {
+            id
+            name
+            summary
+            icon
+            image
+            location
+            website
+        }
+    }
+}

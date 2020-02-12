@@ -1,0 +1,27 @@
+query collectionEditPanel($collectionId: String!) {
+    collection(collectionId: $collectionId) {
+        id
+        name
+        summary
+        icon
+    }
+}
+input CollectionUpdateInput {
+    icon: String
+    name: String!
+    preferredUsername: String!
+    summary: String
+}
+
+mutation updateCollection($collection: CollectionUpdateInput!, $collectionId: String!) {
+    updateCollection(collection: $collection, collectionId: $collectionId) {
+        id
+        canonicalUrl
+        preferredUsername
+        name
+        summary
+        icon
+        createdAt
+        updatedAt
+    }
+}

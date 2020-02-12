@@ -1,0 +1,280 @@
+
+query getActivityPreview($activityId: String!) {
+    activity(activityId: $activityId) {
+        ...ActivityPreviewData
+    }
+}
+
+fragment ActivityPreviewData on Activity {
+    createdAt
+    id
+    verb
+    user {
+        ...ActivityPreviewUserCtx
+    }
+    context {
+        __typename
+
+        ... on Collection{
+            ...ActivityPreviewCollectionCtx
+        }
+
+        ... on Comment{
+            ...ActivityPreviewCommentCtxExtended
+        }
+
+        ... on Community{
+            ...ActivityPreviewCommunityCtx
+        }
+
+        ... on Resource{
+            ...ActivityPreviewResourceCtx
+        }
+
+        ... on Flag{
+            ...ActivityPreviewFlagCtx
+        }
+
+        ... on Like{
+            ...ActivityPreviewLikeCtx
+        }
+
+        ... on Follow{
+            ...ActivityPreviewFollowCtx
+        }
+
+        ... on User{
+            ...ActivityPreviewUserCtx
+        }
+
+    }
+}
+
+fragment ActivityPreviewUserCtx on User {
+    icon
+    image
+    userId: id 
+    userName: name
+    isLocal
+    summary
+    canonicalUrl
+    myFollow {
+        id
+    }
+    likes{
+        totalCount
+    }
+    myLike{
+        id
+    }
+}
+
+
+fragment ActivityPreviewBaseThread on Thread {
+    id
+    isLocal
+    canonicalUrl
+}
+
+fragment ActivityPreviewCollectionCtx on Collection{
+    id
+    isLocal
+    icon
+    name
+    summary
+    canonicalUrl
+    community{
+        id
+        myFollow{
+            id
+        }
+    }
+    creator {
+        ...ActivityPreviewUserCtx
+    }
+    likes{
+        totalCount
+    }
+    myLike{
+        id
+    }
+}
+
+fragment ActivityPreviewCommentCtxExtended on Comment{
+    ...ActivityPreviewCommentCtxBase
+    inReplyTo {
+        ...ActivityPreviewCommentCtxBase
+    }
+    likes{
+        totalCount
+    }
+    myLike{
+        id
+    }
+    thread {
+        ...ActivityPreviewExtendedThread
+    }
+}
+fragment ActivityPreviewCommentCtxBase on Comment{
+    id
+    isLocal
+    content
+    canonicalUrl
+    createdAt
+    creator {
+        ...ActivityPreviewUserCtx
+    }
+    thread {
+        ...ActivityPreviewBaseThread
+    }
+}
+
+fragment ActivityPreviewCommunityCtx on Community{
+    id
+    isLocal
+    icon
+    name
+    summary
+    canonicalUrl
+    myFollow{
+        id
+    }
+    creator {
+        ...ActivityPreviewUserCtx
+    }
+    # likes{
+    #     totalCount
+    # }
+    myLike{
+        id
+    }
+}
+
+fragment ActivityPreviewResourceCtx on Resource{
+    id
+    isLocal
+    icon
+    name
+    summary
+    canonicalUrl
+    url
+    collection{
+        ...ActivityPreviewCollectionCtx
+    }
+    creator {
+        ...ActivityPreviewUserCtx
+    }
+    likes{
+        totalCount
+    }
+    myLike{
+        id
+    }
+}
+
+fragment ActivityPreviewFlagCtx on Flag{
+    isLocal
+    context {
+        ... on Collection{
+            ...ActivityPreviewCollectionCtx
+        }
+        ... on Comment{
+            ...ActivityPreviewCommentCtxBase
+        }
+        ... on Community{
+            ...ActivityPreviewCommunityCtx
+        }
+        ... on Resource{
+            ...ActivityPreviewResourceCtx
+        }
+        ... on User{
+            ...ActivityPreviewUserCtx
+        }
+    }
+}
+
+
+fragment ActivityPreviewLikeCtx on Like{
+    isLocal
+    context {
+        ... on Collection{
+            ...ActivityPreviewCollectionCtx
+        }
+        ... on Comment{
+            ...ActivityPreviewCommentCtxExtended
+        }
+        ... on Resource{
+            ...ActivityPreviewResourceCtx
+        }
+        ... on User{
+            ...ActivityPreviewUserCtx
+        }
+    }
+}
+
+
+fragment ActivityPreviewFollowCtx on Follow{
+    isLocal
+    context {
+        ... on Collection{
+            ...ActivityPreviewCollectionCtx
+        }
+        ... on Community{
+            ...ActivityPreviewCommunityCtx
+        }
+        ... on User{
+            ...ActivityPreviewUserCtx
+        }
+        ... on Thread{
+            ...ActivityPreviewExtendedThread
+        }
+    }
+}
+
+fragment ActivityPreviewExtendedThread on Thread {
+    ...ActivityPreviewBaseThread
+    context {
+        ... on Collection{
+            ...ActivityPreviewCollectionCtx
+        }
+
+        ... on Community{
+            ...ActivityPreviewCommunityCtx
+        }
+
+        ... on Resource{
+            ...ActivityPreviewResourceCtx
+        }
+
+        ... on Flag{
+            ...ActivityPreviewFlagCtx
+        }
+    }
+}
+
+
+mutation activityPreviewLike($contextId: String!) {
+    createLike(contextId: $contextId){
+        ...ActivityPreviewLikeCtx
+    }
+}
+
+mutation activityPreviewUnlike($contextId: String!) {
+    delete(contextId: $contextId){
+        __typename
+    }
+}
+
+
+mutation activityPreviewCreateReply( $comment: CommentInput!, $inReplyToId: String!, $threadId: String!) {
+    createReply(comment: $comment, inReplyToId: $inReplyToId, threadId: $threadId){
+        ...ActivityPreviewCommentCtxBase
+    }
+}
+
+mutation activityPreviewCreateThread($contextId: String!, $comment: CommentInput!) {
+    createThread(comment:$comment, contextId: $contextId){
+        ...ActivityPreviewCommentCtxBase
+    }
+}
+

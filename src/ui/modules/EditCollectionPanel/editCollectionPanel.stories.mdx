@@ -1,0 +1,20 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { PropsTable } from '@storybook/components';
+import {getEditCollectionProps} from 'ui/mock/context'
+import { EditCollectionPanel, EditCollectionContext } from 'ui/modules/EditCollectionPanel';
+import { action } from '@storybook/addon-actions';
+import {Box} from 'rebass'
+
+<Meta title="Modules|EditCollectionPanel" component={EditCollectionPanel}/>
+
+# EditCollectionPanel
+Let's define a story for the `Activity preview` module
+
+<Preview>
+  <Story name="edit collection module">
+    <Box height={680}>
+      <EditCollectionPanel {...getEditCollectionProps()} />
+    </Box>
+  </Story>  
+</Preview>
+

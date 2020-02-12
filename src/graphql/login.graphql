@@ -1,0 +1,7 @@
+#import "./fragments/basicAuthPayload.graphql"
+mutation loginMutation($email: String!, $password: String!) {
+    createSession(email: $email, password: $password) {
+        ... BasicAuthPayload
+    }
+}
+

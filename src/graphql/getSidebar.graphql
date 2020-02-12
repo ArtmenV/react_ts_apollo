@@ -1,0 +1,41 @@
+query getSidebarQuery($limitComm: Int, $endComm: String) {
+    me {
+        user {
+            id
+	        canonicalUrl
+            name
+            preferredUsername
+            icon
+            followedCommunities(limit: $limitComm, after:$endComm) {
+                pageInfo { startCursor endCursor }
+                edges {
+                    node {
+                        follow {
+                            id
+                            # canonicalUrl
+                        }
+                        community {
+                            __typename
+                            ... on Community {
+                                id
+                                preferredUsername
+                                name
+                                # summary
+                                icon
+                                # isLocal
+                                # isPublic
+                                # isDisabled
+                                # id
+                                # myFollow    { id }
+                                # collections { totalCount }
+                                # followers   { totalCount }
+                                # threads     { totalCount }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

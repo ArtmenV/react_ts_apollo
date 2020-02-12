@@ -1,0 +1,19 @@
+fragment BasicUser on User {
+    id
+    canonicalUrl
+    displayUsername
+    name
+    icon
+    location
+    summary
+    image
+    isLocal
+    # isPublic
+    # isDisabled
+    createdAt
+    updatedAt
+    lastActivity
+    myFollow { id }
+    myLike   { id }
+    myFlag { id }
+}

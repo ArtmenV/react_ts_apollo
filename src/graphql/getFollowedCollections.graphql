@@ -1,0 +1,30 @@
+#import "./fragments/basicCollection.graphql"
+
+query getFollowedCollections($limit: Int, $endColl: String) {
+    me {
+        user {
+            id
+            canonicalUrl
+            # isLocal
+            # isPublic
+            # isDisabled
+            followedCollections(limit: $limit, after:$endColl) {
+                pageInfo { startCursor endCursor }
+                edges {
+                    node {
+                        follow {
+                            id
+                            canonicalUrl
+                        }
+                        collection {
+                            __typename
+                            ... on Collection {
+                                ...BasicCollection
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

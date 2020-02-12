@@ -1,0 +1,6 @@
+#import "HOC/pages/community/CommunityPage.graphql"
+query getThread($threadId: String!) {
+    thread(threadId: $threadId) {
+        ...ComunityPageThread
+    }
+}

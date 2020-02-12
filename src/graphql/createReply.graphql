@@ -1,0 +1,34 @@
+input CommentInput {
+    content: String!
+}
+
+mutation createReplyMutation(
+    $comment: CommentInput!,
+    $inReplyToId: String!,
+    $threadId: String!
+) {
+    createReply(comment: $comment, inReplyToId: $inReplyToId, threadId: $threadId) {
+        id
+	    canonicalUrl
+        inReplyTo {
+            ...BasicCommentWithInReplyTo
+        }
+        content
+        isLocal
+        isPublic
+        isHidden
+        createdAt
+        updatedAt
+        myLike { id }
+        creator {
+            id
+            preferredUsername
+            canonicalUrl
+            isLocal
+            isPublic
+            isDisabled
+            icon
+            name
+        }
+    }
+}

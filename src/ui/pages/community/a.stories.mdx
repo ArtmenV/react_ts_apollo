@@ -1,0 +1,197 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { PropsTable } from '@storybook/components';
+import { Community } from '.';
+import {recentActivitiesContext, collectionsContext, collectionPreviewContext, editProvider, heroContext, activityPreviewContext} from 'ui/mock/context'
+import {RecentActivitiesContext, CollectionsContext } from '.';
+import { CollectionPreviewContext, CollectionPreview } from 'ui/modules/CollectionPreview';
+import { HeroCommunity, Status, Props } from 'ui/modules/HeroCommunity';
+import { action } from '@storybook/addon-actions';
+import { ContextType, ContextVerb } from 'ui/modules/ActivityPreview/preview';
+import {ActivityPreview} from 'ui/modules/ActivityPreview'
+import { useFormik } from 'formik';
+import {WithSidebar} from "ui/templates/withSidebar"
+import {Sidebar} from 'ui/modules/Sidebar'
+import {SidebarProps} from 'ui/modules/Sidebar/a.stories.mdx'
+
+
+export const communityProps = {
+      community: {
+        status: Status.Loaded,
+        canModify: true,
+        following: true,
+        icon: 'https://picsum.photos/800/300',
+        name: 'Community nino',
+        preferredUsername: 'ninos',
+        summary: '',
+        totalMembers: 193,
+        toggleJoin: {
+          toggle: action('Unjoin !'),
+          isSubmitting: false
+        },
+        EditCommunityPanel: ({ done }) => (
+          <img
+            onClick={done}
+            src="https://via.placeholder.com/400x200.png?text=An editing panel"
+          />
+        )
+      }
+    };
+
+export  const activityPreviewProps = {
+      status: Status.Loaded,
+      actor: {
+        icon: 'https://picsum.photos/80/80',
+  link: '1',
+  name: 'Ivan',
+  preferredUsername: 'tata'
+  },
+      actions: {
+      like: {
+    totalLikes: 3,
+    toggleLikeFormik: useFormik<{}>({
+      initialValues: {},
+      onSubmit: vals => {
+        action('submitting...')();
+        return new Promise(resolve =>
+          setTimeout(() => {
+            action('submitted...')();
+            resolve();
+          }, 2000)
+        );
+      }
+    }),
+    iLikeIt: true
+  },
+  reply: {
+    replyFormik: useFormik<{}>({
+      initialValues: { replyMessage: '' },
+      onSubmit: vals => {
+        action(`submitting: ${vals.replyMessage}`)();
+        return new Promise(resolve =>
+          setTimeout(() => {
+            action(`submitted: ${vals.replyMessage}`)();
+            resolve();
+          }, 2000)
+        );
+      }
+    })
+  }
+  },
+      createdAt: '29-01-2020',
+      context: {
+        link: 'https://picsum.photos/80/80',
+        verb: ContextVerb.Created,
+        type: ContextType.Comment,
+        content: 'I hitch hiked up to Alaska in the summer of 1992, the same year he did. He and I were the same exact age. Heck, we could have crossed paths in the youth hostel in Anchorage, or passed one another hitch hiking. Who knows. He died while still young and idealistic. A pure state.'
+      } /* ,
+      inReplyToCtx: {
+        link: 'https://picsum.photos/80/80',
+        actor: {
+        icon: 'https://picsum.photos/80/80',
+  link: '1',
+  name: 'Ivan',
+  preferredUsername: 'tata'
+  }
+      } */
+    };
+
+
+
+<Meta title="Pages|Community" component={Community}/>
+
+
+
+# Community
+Let's define a story for the `community` page
+
+<Preview>
+  <Story name="community page">
+    <Community {...{
+        newThreadFormik:null,
+        ActivityBoxes: [
+          (<ActivityPreview {...activityPreviewProps} key="1" />),
+          (<ActivityPreview {...activityPreviewProps} key="2" />),
+          (<ActivityPreview {...activityPreviewProps} key="3" />),
+        ],
+        CollectionBoxes: [
+          (<CollectionPreview
+              key="1"
+              icon="https://i.picsum.photos/id/911/80/80.jpg"
+              name="Beatiful landscapes"
+              summary="There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle"
+              totalResources={12}
+              link={{external:false,url:'#'}}
+            />
+          ),
+          (<CollectionPreview
+              key="2"
+              icon="https://i.picsum.photos/id/911/80/80.jpg"
+              name="Beatiful landscapes"
+              summary="There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle"
+              totalResources={12}
+              link={{external:false,url:'#'}}
+            />
+          ),
+          (<CollectionPreview
+              key="3"
+              icon="https://i.picsum.photos/id/911/80/80.jpg"
+              name="Beatiful landscapes"
+              summary="There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle"
+              totalResources={12}
+              link={{external:false,url:'#'}}
+            />
+          )
+        ],
+        HeroCommunityBox: (<HeroCommunity {...communityProps}/>),
+        basePath:"/",
+        ThreadBoxes: [
+          (<ActivityPreview {...activityPreviewProps} key="1" />),
+          (<ActivityPreview {...activityPreviewProps} key="2" />),
+          (<ActivityPreview {...activityPreviewProps} key="3" />),
+        ]
+        
+    }} />
+  </Story>
+</Preview>
+
+
+# Community with sidebar
+
+
+<Preview>
+  <Story name="community with sidebar page">
+    <WithSidebar
+      {...{SidebarBox: ({userId}) => (
+        <Sidebar sidebar={SidebarProps} />
+      )}}
+    >
+        <Community {...{
+        newThreadFormik:null,
+        ActivityBoxes: [
+          (<ActivityPreview {...activityPreviewProps} key="1" />),
+          (<ActivityPreview {...activityPreviewProps} key="2" />),
+          (<ActivityPreview {...activityPreviewProps} key="3" />),
+        ],
+        CollectionBoxes: [
+          (<CollectionPreview
+              key="1"
+              icon="https://i.picsum.photos/id/911/80/80.jpg"
+              name="Beatiful landscapes"
+              summary="There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle"
+              totalResources={12}
+              link={{external:false,url:'#'}}
+            />
+          ),
+        ],
+        HeroCommunityBox: (<HeroCommunity {...communityProps}/>),
+        basePath:"/",
+        ThreadBoxes: [
+          (<ActivityPreview {...activityPreviewProps} key="1" />),
+          (<ActivityPreview {...activityPreviewProps} key="2" />),
+          (<ActivityPreview {...activityPreviewProps} key="3" />),
+        ]
+}} />
+    </WithSidebar>
+  </Story>
+</Preview>
+
